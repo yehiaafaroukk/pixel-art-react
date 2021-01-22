@@ -31,10 +31,16 @@ jobs:
     - name: run unit testing
       run: npm test
     
-    - name: run linters
-      run: npm install travis-lint
-    - run: npm lint
-
+    #- name: run linters
+    #  run: npm install travis-lint
+    #- run: npm lint
+    - name: Install modules
+      run: yarn
+    
+    - name: Run ESLint
+      run: eslint . --ext .js,.jsx,.ts,.tsx
+    
+    
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
