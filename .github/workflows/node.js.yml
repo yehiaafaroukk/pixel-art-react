@@ -29,17 +29,7 @@ jobs:
     - run: npm run build --if-present
     
     - name: run unit testing
-      run: npm test
-    
-    - name: run linters
-      run: npm format
-    #- run: npm lint
-    #- name: Install modules
-     # run: yarn
-    
-    #- name: Run ESLint
-    #  run: eslint . --ext .js,.jsx,.ts,.tsx
-    
+      run: npm test 
     
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
