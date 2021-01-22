@@ -29,6 +29,10 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     
+    - name: running linters
+    - run: npm install travis-lint
+    - run: npm lint
+    
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
