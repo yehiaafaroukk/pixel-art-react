@@ -32,7 +32,7 @@ jobs:
       run: npm test
     
     - name: run linters
-      run: npm lint
+      run: npm format
     #- run: npm lint
     #- name: Install modules
      # run: yarn
